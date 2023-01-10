@@ -49,8 +49,13 @@ func main() {
 	// returning a func from a func
 	f1 := mathExpression(AddExpr)
 	f2 := mathExpression(MultiplyExpr)
-	fmt.Printfw("Summing 1 and 5: %.2f\n", f1(1, 5))
+	fmt.Printf("Summing 1 and 5: %.2f\n", f1(1, 5))
 	fmt.Printf("Multiplying 3 by 4: %.2f\n", f2(3, 4))
+	fpower := simplemath.PowerOfTwo(10)
+	fmt.Println("Powers of 2...")
+	fmt.Println(fpower())
+	fmt.Println(fpower())
+	fmt.Println(fpower())
 }
 
 type RoundTripCounter struct {

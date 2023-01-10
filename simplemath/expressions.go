@@ -31,3 +31,12 @@ func Sum(values ...float64) float64 {
 	}
 	return total
 }
+
+func PowerOfTwo(x float64) func() float64 {
+	y := x
+	return func() float64 {
+		y += 1
+		return math.Pow(y, 2)
+	}
+
+}
